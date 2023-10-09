@@ -1,0 +1,167 @@
+body {
+    font-family: Garamond, "Times New Roman", serif !important;
+    width: 100% !important;
+    margin: 3em 0 0 0 !important;
+    padding: 0 60px;
+    line-height: 1.4;
+    word-spacing: 1.5pt;
+    letter-spacing: 0.2pt;
+    color: #000;
+    background: none;
+    font-size: 22px;
+}
+
+
+
+#tampil_surat {
+    width: 100%;
+}
+
+#kepala_surat {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 2px;
+}
+
+#cop_img {}
+
+#cop_text {
+    text-align: center;
+    padding-top: 10px;
+    padding-bottom: -10px;
+}
+
+#cop_text strong {
+    font-size: 33px;
+    line-height: 24px;
+}
+
+#cop_text strong span {
+    font-size: 37px;
+}
+
+#cop_alamat {
+    text-align: center;
+    font-size: 16;
+    line-height: 8px;
+    margin-top: 5px;
+}
+
+/* #cop_text p {
+    margin-top: 10px;
+    font-size: 22px;
+    line-height: 1px;
+    margin-bottom: -6px;
+} */
+
+#judul_surat {
+    text-align: center;
+    /* width: 100%; */
+    margin-top: 30px;
+    /* list-style-type: none; */
+    /* display: flex;
+    justify-content: center; */
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+}
+
+#judul_surat strong {
+    width: auto;
+    text-transform: uppercase;
+    text-decoration: underline;
+    font-weight: bolder;
+    font-size: 25px;
+
+    /* line-height: 1px; */
+}
+
+#judul_surat p {
+    margin-top: -5px !important;
+    font-size: 21px !important;
+}
+
+#nomor_surat {
+    display: flex;
+    justify-content: center;
+    text-align: left;
+}
+
+#pembuka_surat,
+#deskripsi_surat,
+#penutup_surat {
+    padding: 0 30px;
+    margin-top: 20px;
+    text-align: justify;
+}
+
+#pembuka_surat,
+#deskripsi_surat,
+#penutup_surat,
+#ttd_surat span {
+    font-size: 22px;
+}
+
+#biodata_surat {
+    padding: 0 60px;
+    margin-top: 20px;
+    margin-bottom: 50px;
+}
+
+#biodata_surat table {
+    width: 100%;
+    font-size: 22px;
+    /* border: 1px solid #000; */
+}
+
+td {
+    /* border: 1px solid black; */
+}
+
+#ttd_surat {
+    padding: 0 30px;
+    margin-top: 40px;
+    /* text-align: right; */
+    /* width: 15%; */
+
+}
+
+#ttd_surat .boxs {
+    /* text-align: center; */
+}
+
+#ttd_surat table {
+    text-align: center;
+}
+
+
+
+.garis {
+    width: 100%;
+    margin-bottom: 1.5px;
+}
+
+.tebal {
+    border-top: 3px solid black;
+}
+
+.tipis {
+    border-top: 1px solid black;
+}
+
+.luas {
+    width: 200px;
+}
+
+.titikdua {
+    width: 10px;
+}
+
+.luas,
+.titikdua {
+    padding-top: 0;
+    vertical-align: top;
+}
