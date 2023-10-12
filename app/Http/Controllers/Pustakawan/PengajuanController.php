@@ -33,6 +33,7 @@ class PengajuanController extends Controller
         Pengajuanbebaspustaka::create([
             'biodatapustakawans_id' => $request->biodatapustakawans_id,
             'users_id' => $request->users_id,
+            'status' => '0',
 
         ]);
 

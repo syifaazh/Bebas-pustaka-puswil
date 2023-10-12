@@ -59,9 +59,15 @@ class PengajuanController extends Controller
     }
 
 
-    function edit($id)
+    function confirm($id)
     {
+        $pengajuan = Pengajuanbebaspustaka::find($id);
+        $pengajuan->status = 1;
+        $pengajuan->save();
+
+        return redirect('/administrator/pengajuan');
     }
+   
 
 
     function tablePengajuan(Request $request)
@@ -87,8 +93,8 @@ class PengajuanController extends Controller
                     // return $data->a;
                     return '<div style="display: inline-flex;" class="">
                         <a target="_blank" href="' . url('') . '/administrator/pengajuan/print/' . $data->id . '" class="btn btn-primary btn-sm mr-3"><i class="fa-solid fa-print"></i></a> 
-                        <a href="' . url('') . '/administrator/pengajuan/delete/' . $data->id . '" class="btn btn-danger btn-sm"><i class="fas fa-trash"></i></a>
-                        <a href="' . url('') . '/administrator/pengajuan/edit/' . $data->id . '" class="btn btn-warning btn-sm"><i class="fas fa-edit"></i></a>
+                        <a href="' . url('') . '/administrator/pengajuan/delete/' . $data->id . '" class="btn btn-danger btn-sm mr-3"><i class="fas fa-trash"></i></a> 
+                        <a href="' . url('') . '/administrator/pengajuan/confirm/' . $data->id . '" class="btn btn-success btn-sm"><i class="fas fa-check"></i></a>
                         </div>';
                 })
                 ->rawColumns(['action'])
