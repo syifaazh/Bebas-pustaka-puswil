@@ -8,6 +8,8 @@ use Illuminate\Database\Eloquent\Model;
 class Pengajuanbebaspustaka extends Model
 {
     use HasFactory;
+    protected $table = 'pengajuanbebaspustakas';
+    protected $fillable = ['id', 'biodatapustakawans_id', 'users_id', 'status'];
 
     protected $guarded = [];
 

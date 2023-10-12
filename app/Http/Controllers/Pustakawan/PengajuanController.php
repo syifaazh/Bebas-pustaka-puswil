@@ -25,7 +25,7 @@ class PengajuanController extends Controller
             $pengajuan = 'pustakawan.pengajuan.donepengajuan';
         }
 
-        return view('pustakawan.pengajuan.based', compact('pengajuandata', 'pengajuan', 'biodata', 'biodata2'));
+        return view('pustakawan.pengajuan.based', compact('cekpengajuan','pengajuandata', 'pengajuan', 'biodata', 'biodata2'));
     }
 
     function store(Request $request)

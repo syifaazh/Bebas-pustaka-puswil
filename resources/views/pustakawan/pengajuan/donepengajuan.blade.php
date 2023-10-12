@@ -31,14 +31,13 @@
                     <button type="button" class="btn btn-success btn-sm" disabled> sudah diajukan</button>
                 </form>
             </td>
-            @if ($b->status == 0)
+            @foreach($cekpengajuan as $c)
+            @if ($c->status == 0)
             <td><span class="badge badge-warning">Belum Diverifikasi</span></td>
-            @elseif ($b->status == 1)
+            @elseif ($c->status == 1)
             <td><span class="badge badge-success">Diterima</span></td>
-            @elseif ($b->status == 2)
-            <td><span class="badge badge-danger">Ditolak</span></td>
             @endif
-
+            @endforeach
             <td><a href="{{ url('/generate-pdf') }}" class="btn btn-danger" target="_blank">Unduh PDF</a></td>
         </tr>
         @php
