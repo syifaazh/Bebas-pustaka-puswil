@@ -57,7 +57,11 @@ Route::middleware('auth', 'cekRole:Administrator')->group(function () {
 Route::middleware('auth', 'cekRole:Pustakawan')->group(function () {
     Route::auto('pustakawan/biodata', BiodataController::class);
     Route::auto('pustakawan/pengajuan', PengajuanController::class);
-    Route::get('/generate-pdf', 'PdfController@generatePDF');
-    Route::post('/send-data-to-admin', 'PengajuanController@sendDataToAdmin')->middleware('auth')->name('send-data-to-admin');
+    Route::get('generate-pdf', [PDFController::class, 'generatePDF']);
+    Route::get('pustakawan/suratPDF/{id}', [PengajuanController::class, 'suratPDF']);
+
+
+    // Route::get('/generate-pdf', 'PdfController@generatePDF');
+    // Route::post('/send-data-to-admin', 'PengajuanController@sendDataToAdmin')->middleware('auth')->name('send-data-to-admin');
 
 });
