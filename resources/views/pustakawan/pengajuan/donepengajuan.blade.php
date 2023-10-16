@@ -1,6 +1,14 @@
 <h2 style="font-weight: bolder">Hai, {{ Auth::user()->name }}</h2>
-
 <h5>Pengajuan anda sedang di proses</h5>
+
+{{-- Styles --}}
+<style>
+    .badge {
+      font-size: 10pt;
+      padding: 9px 10px;
+    }
+  </style>
+
 <table class="table">
     <thead>
         <tr>
@@ -28,7 +36,7 @@
                     @csrf
                     <input type="hidden" name="biodatapustakawans_id" value="{{ $b->id }}">
                     <input type="hidden" name="users_id" value="{{ Auth::user()->id }}">
-                    <button type="button" class="btn btn-success btn-sm" disabled> sudah diajukan</button>
+                    <button type="button" class="btn btn-success btn-sm" disabled>Sudah Diajukan</button>
                 </form>
             </td>
             @foreach($cekpengajuan as $c)
@@ -38,7 +46,7 @@
             <td><span class="badge badge-success">Diterima</span></td>
             @endif
             @endforeach
-            <td><a href="{{ url('/generate-pdf') }}" class="btn btn-danger" target="_blank">Unduh PDF</a></td>
+            <td><a href="{{ url('/generate-pdf') }}" class="btn btn-danger btn-sm" target="_blank">Unduh PDF</a></td>
         </tr>
         @php
         $no++
