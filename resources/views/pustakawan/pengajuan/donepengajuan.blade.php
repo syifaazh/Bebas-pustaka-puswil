@@ -1,4 +1,7 @@
 <h2 style="font-weight: bolder">Hai, {{ Auth::user()->name }}</h2>
+<h5>Pengajuan anda sedang di proses</h5>
+
+{{-- Styles --}}
 <style>
     .badge {
       font-size: 10pt;
@@ -6,7 +9,6 @@
     }
   </style>
 
-<h5>Pengajuan anda sedang di proses</h5>
 <table class="table">
     <thead>
         <tr>
