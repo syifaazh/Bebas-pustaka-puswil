@@ -53,7 +53,7 @@
                     @endif
                 @endforeach
                 <td>
-                    <a href="{{ url('pustakawan/pengajuan/suratPDF/' .$->id) }}" class="btn btn-danger btn-sm"
+                    <a href="{{ url('pustakawan/pengajuan/suratPDF/' .$c->id) }}" class="btn btn-danger btn-sm"
                         target="_blank">Unduh PDF</a></td>
             </tr>
             @php
