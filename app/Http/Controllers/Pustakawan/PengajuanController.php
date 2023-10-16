@@ -7,6 +7,7 @@ use App\Models\Biodatapustakawan;
 use App\Models\Pengajuanbebaspustaka;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use PDF;
 use Illuminate\Support\Facades\DB;
 
 class PengajuanController extends Controller
@@ -37,10 +38,19 @@ class PengajuanController extends Controller
 
         ]);
 
-        return redirect()->back()->with('success', 'Pengajuan sudah dikirim, silakan cek ke Kantor!');
+        return redirect()->back()->with('success', 'Pengajuan sudah dikirim!');
     }
 
     function update(Request $request)
     {
     }
+    public function suratPDF($id){
+        $pengajuan = Pengajuanbebaspustaka::find($id);
+
+        $pdf = PDF:: loadview('pustakawan.pengajuan.surat',['surat' => $pengajuan]);
+
+        return $pdf->download('surat.pdf');
+        // return $pdf->stream();
+    }
+
 }
